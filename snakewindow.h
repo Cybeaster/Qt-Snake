@@ -20,7 +20,7 @@ class Snakewindow : public QMainWindow
 	public:
 		Snakewindow(QWidget *parent = nullptr);
 		~Snakewindow();
-		void movebodies(QPointF);
+		void movebodies(const QPointF prevpos);
 		void makebody();
 	private slots:
 		void on_Startgame_clicked();
@@ -29,7 +29,7 @@ class Snakewindow : public QMainWindow
 		void timeevent();
 		void hasbeeneaten();
 		void collisioncheck();
-		void Gameover();
+		void Gameover(int number);
 
 	signals:
 	void eaten();
