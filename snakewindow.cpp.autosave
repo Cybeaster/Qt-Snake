@@ -40,7 +40,7 @@ Snakewindow::~Snakewindow()
 	delete ui;
 }
 
-
+//move the bodies
 void Snakewindow::movebodies(const QPointF prevpos)
 {
 	for (size_t t = 0;t < bodies.size() - 1;t++)
